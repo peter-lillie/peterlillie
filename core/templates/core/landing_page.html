@@ -1,5 +1,22 @@
-{% include 'core/base.html' %}
+{% extends 'core/base.html' %}
+
+{% load static %}
+
+{% block title %}Home{% endblock  %}
 
 {% block content %}
-<h1>Hello, world! Welcome to my corner of the web.</h1>
+<div class="hero bg-base-200 min-h-screen">
+    <div class="hero-content flex-col lg:flex-row">
+      <img
+        src="{% static 'core/images/profile.jpg' %}"
+        class="max-w-sm rounded-lg shadow-2xl" />
+      <div>
+        <h1 class="text-5xl font-bold">Hello, world! I'm Peter.</h1>
+        <p class="py-6">
+          Welcome to my corner of the world wide web.
+        </p>
+        <a href="{% url 'about' %}"><button class="btn btn-primary">About Me</button></a>
+      </div>
+    </div>
+</div>
 {% endblock %}

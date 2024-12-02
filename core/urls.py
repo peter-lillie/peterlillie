@@ -20,4 +20,5 @@ from django.urls import path
 
 urlpatterns = [
     path("", view=core_views.landing_page, name="landing_page"),
+    path("about", view=core_views.about, name="about"),
     ]
